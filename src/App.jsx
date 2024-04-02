@@ -1,8 +1,4 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import {ShopItem} from './component/ShopItem'
+import ShopItemFunc from './component/ShopItemFunc'
 
 function App() {
   const item = {
@@ -14,7 +10,17 @@ function App() {
     currency: '£'
   }
   return (
-    <ShopItem item={item}/>
+    // <ShopItemFunc {...item}/>
+    <div className="container">
+    <div className="background-element">
+    </div>
+    <div className="highlight-window">
+      <div className='highlight-overlay'></div>
+    </div>
+    <div className="window">
+      <ShopItemFunc {...item} />
+    </div>
+  </div>
   )
 }
 
